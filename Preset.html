@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preset Alight Motion</title>
+
+  <!-- Font Keren -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome untuk ikon sosmed -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #2e026d, #ff00c8);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: rgba(0,0,0,0.4);
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: 0 0 15px #ff00c8;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      text-shadow: 0 0 8px #ff00c8;
+      font-weight: 600;
+    }
+    header p { margin: 0.3rem 0 0; }
+
+    /* Search box */
+    .search-box {
+      text-align: center;
+      margin: 1rem;
+    }
+    .search-box input {
+      width: 90%;
+      max-width: 400px;
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      outline: none;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      box-shadow: 0 0 8px #ff00c8;
+    }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .card {
+      background: rgba(0,0,0,0.5);
+      border-radius: 12px;
+      box-shadow: 0 0 12px #a200ff;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #ff00c8;
+    }
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 0.8rem;
+      text-align: center;
+    }
+    .card-content h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #fff;
+      text-shadow: 0 0 6px #ff00c8;
+    }
+
+    /* Detail */
+    .detail {
+      padding: 1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .detail h2 {
+      text-shadow: 0 0 6px #ff00c8;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .detail iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #a200ff;
+    }
+    .download-btn {
+      display: block;
+      margin: 1.2rem auto;
+      padding: 0.6rem 1.2rem;
+      background: linear-gradient(90deg, #a200ff, #ff00c8);
+      color: #fff;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      max-width: 220px;
+      box-shadow: 0 0 12px #ff00c8;
+      transition: 0.3s;
+    }
+    .download-btn:hover {
+      box-shadow: 0 0 20px #ff00c8;
+      transform: scale(1.05);
+    }
+    .back-btn {
+      background: rgba(255,255,255,0.2);
+      margin-top: -0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0,0,0,0.5);
+      box-shadow: 0 -2px 15px #ff00c8;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      color: #fff;
+      text-shadow: 0 0 6px #ff00c8;
+    }
+    footer .social-icons {
+      margin: 0.5rem 0;
+    }
+    footer .social-icons a {
+      color: #fff;
+      font-size: 1.4rem;
+      margin: 0 10px;
+      transition: 0.3s;
+      text-shadow: 0 0 6px #ff00c8;
+    }
+    footer .social-icons a:hover {
+      color: #ff00c8;
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 500px) {
+      header h1 { font-size: 1.4rem; }
+      .detail iframe { height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌟 Preset Alight Motion</h1>
+  <p>Koleksi preset neon ungu x pink</p>
+</header>
+
+<!-- Halaman utama -->
+<div id="homePage">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Cari preset...">
+  </div>
+  <div class="grid" id="presetGrid">
+    <a href="#detail1" class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Preset Anime Glow">
+      <div class="card-content"><h3>Anime Glow</h3></div>
+    </a>
+    <a href="#detail2" class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Preset Smooth Shake">
+      <div class="card-content"><h3>Smooth Shake</h3></div>
+    </a>
+    <a href="#detail3" class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Preset Slowmo Bokeh">
+      <div class="card-content"><h3>Slowmo Bokeh</h3></div>
+    </a>
+  </div>
+</div>
+
+<!-- Detail Preset -->
+<div id="detail1" class="detail" style="display:none;">
+  <h2>Anime Glow</h2>
+  <iframe src="https://www.youtube.com/embed/LV7Cc_Bw9Xw" allowfullscreen></iframe>
+  <a href="https://drive.google.com/" target="_blank" class="download-btn">⬇️ Download Preset</a>
+  <a href="#" class="download-btn back-btn">⬅️ Kembali</a>
+</div>
+
+<div id="detail2" class="detail" style="display:none;">
+  <h2>Smooth Shake</h2>
+  <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
+  <a href="https://drive.google.com/" target="_blank" class="download-btn">⬇️ Download Preset</a>
+  <a href="#" class="download-btn back-btn">⬅️ Kembali</a>
+</div>
+
+<div id="detail3" class="detail" style="display:none;">
+  <h2>Slowmo Bokeh</h2>
+  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  <a href="https://drive.google.com/" target="_blank" class="download-btn">⬇️ Download Preset</a>
+  <a href="#" class="download-btn back-btn">⬅️ Kembali</a>
+</div>
+
+<!-- Footer dengan sosmed -->
+<footer>
+  <p>© 2025 Om Yudz | Dibuat dengan 💜 & ⚡ Neon Style</p>
+  <div class="social-icons">
+    <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/628xxxxxxx" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+
+<script>
+  // Halaman detail
+  function showPage(hash) {
+    document.querySelectorAll('.detail').forEach(el => el.style.display = 'none');
+    document.getElementById('homePage').style.display = 'none';
+
+    if (!hash || hash === "#") {
+      document.getElementById('homePage').style.display = 'block';
+    } else {
+      const page = document.querySelector(hash);
+      if (page) page.style.display = 'block';
+    }
+  }
+
+  window.addEventListener('hashchange', () => showPage(location.hash));
+  showPage(location.hash);
+
+  // Fitur search
+  const searchInput = document.getElementById("searchInput");
+  const cards = document.querySelectorAll("#presetGrid .card");
+
+  searchInput.addEventListener("keyup", function() {
+    const filter = searchInput.value.toLowerCase();
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = text.includes(filter) ? "" : "none";
+    });
+  });
+</script>
+
+</body>
+</html>
